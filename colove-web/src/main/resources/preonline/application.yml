@@ -1,0 +1,73 @@
+spring:
+  application:
+    name: colove-web
+#server
+server:
+  port: 9001
+#  servlet-path: /colove-web
+#  tomcat:
+#    accesslog:
+#      enabled: true
+#      directory: ./logs
+#      pattern: "%{X-Forwarded-For}i %a %{X-B3-TraceId}i %t %m %U %s %b %D"
+#      rename-on-rotate: true
+#      suffix: .log
+#      prefix: access
+#      rotate: true
+#      buffered: false
+#      file-date-format: yyyy-MM-dd
+#    accept-count: 500
+#    max-connections: 800
+#    min-spare-threads: 20
+#    max-threads: 200
+#log
+#logging:
+#  config: classpath:logback.xml
+#  level:
+#    xin:
+#      colove: debug
+#    com:
+#      netflix: debug
+#admin
+#management:
+#  security:
+#    enabled: false
+eureka:
+  client:
+    service-url:
+      defaultZone: http://47.94.207.245:2112/eureka/,http://192.144.154.78:2114/eureka/
+#  instance:
+#    prefer-ip-address: true
+#    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+#    metadata-map:
+#      management.context-path: ${server.servlet-path}
+#    health-check-url-path: ${server.servlet-path}/health
+#graceful quit
+#endpoints:
+#  shutdown:
+#    enabled: true
+#    sensitive: false
+#rpc retry
+#feign:
+#  hystrix:
+#    enabled: true
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          strategy: THREAD
+#          thread:
+#            timeoutInMilliseconds: 25000
+#ribbon:
+#  ReadTimeout: 8000
+#  ConnectTimeout: 1000
+#  #false to only allow get method to retry
+#  OkToRetryOnAllOperations: true
+#    # Max number of next servers to retry (excluding the first server)
+#  MaxAutoRetriesNextServer: 2
+#    # Max number of retries on the same server (excluding the first try)
+#  MaxAutoRetries: 0
+#    # Interval to refresh the server list from the source
+#  ServerListRefreshInterval: 20000
+#  retryableStatusCodes: 404,500
