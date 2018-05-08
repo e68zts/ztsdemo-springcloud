@@ -21,13 +21,13 @@ server:
 #    min-spare-threads: 20
 #    max-threads: 200
 #log
-#logging:
-#  config: classpath:logback.xml
-#  level:
-#    xin:
-#      colove: debug
-#    com:
-#      netflix: debug
+logging:
+  config: classpath:logback.xml
+  level:
+    xin:
+      colove: info
+    com:
+      netflix: debug
 #admin
 #management:
 #  security:
