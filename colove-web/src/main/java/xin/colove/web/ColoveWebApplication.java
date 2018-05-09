@@ -9,11 +9,16 @@ import org.springframework.web.client.RestTemplate;
 
 import lombok.extern.slf4j.Slf4j;
 
-
+/**
+ * ConsumerApplication
+ * 
+ * @author  zts
+ * @version 1.0.0
+ */
 @EnableDiscoveryClient
 @SpringBootApplication
 @Slf4j
-public class ConsumerApplication {
+public class ColoveWebApplication {
 
     @Bean
     @LoadBalanced
@@ -23,7 +28,7 @@ public class ConsumerApplication {
     
 	public static void main(String[] args) {
 //	    log.debug("starting.....");log.info("starting.....");log.warn("starting.....");log.error("starting.....");
-		SpringApplication.run(ConsumerApplication.class, args);
+		SpringApplication.run(ColoveWebApplication.class, args);
 		
 	}
 }

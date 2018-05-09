@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import lombok.extern.slf4j.Slf4j;
-import xin.colove.web.ConsumerApplication;
+import xin.colove.web.ColoveWebApplication;
 
 /**
- * 
- * @author  Administrator
+ * demo
+ * @author  zts
  * @version 1.0.0
  */
 @RestController
@@ -26,6 +26,7 @@ public class ConsumerController {
     
     @RequestMapping(value ="/ribbon-consumer",  method =RequestMethod.GET)
     public  String  helloConsumer  (String name){
+        log.info("ribbon-consumer ...method:{}", "get");
         return  restTemplate.getForEntity(url+"/hello?name={1}",String.class,name).getBody();
     }
 }
